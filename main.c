@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <windows.h>
 #include <time.h>
+
 #define MAX 20
 #define MAXCALDA 399
 
@@ -11,16 +12,18 @@ void mapa();
 void entrada();
 void logica();
 
-int gameOver=0;// loop controller
-int x,y;// position of snake head
-int score;// player score 
-int encX,encY;// value for increment the player position
-int comX,comY;// food position
+int gameOver=0; // loop controller
+int x,y; // position of snake head
+int score; // player score 
+int encX,encY; // value for increment the player position
+int comX,comY; // food position
 int calX[MAXCALDA],calY[MAXCALDA],caldaT; // array for tail in x and y, size of tail
 
 int record; // For the height score
 FILE *data; // file data
 
+
+// Function for setup everything
 void setUp(){
     data = fopen("data","rb");
     if(data == NULL){
@@ -43,6 +46,7 @@ void setUp(){
     caldaT=0;
 }
 
+// Draw the map
 void mapa(){
     int i,j,k;
     for(i=0;i<MAX+2;i++){
@@ -84,6 +88,8 @@ void mapa(){
     printf("\nRecorde: %d",record);
 
 }
+
+// input of keyboard
 void entrada(){
     char comando;
     while(_kbhit()){
@@ -111,14 +117,16 @@ void entrada(){
     }
 
 }
+
+// Game logic
 void logica(){
-    //logica calda
+
     int i;
-    int posCalX=calX[0],posCalY=calY[0];//posi��o da calda apos a cebe�a
-    int posSeguiCalX, posSeguiCalY;//auxiliar para as proximas caldas
+    int posCalX=calX[0],posCalY=calY[0]; // the position of the tail behind the head
+    int posSeguiCalX, posSeguiCalY; // help variable for change the positions
     calX[0]=x;
     calY[0]=y;
-    for(i=1;i<MAXCALDA;i++){//"bubbleSort" caldas, a de tras segue a da frente
+    for(i=1;i<MAXCALDA;i++){ // like a "bubbleSort" for tail caldas
         posSeguiCalX = posCalX;
         posSeguiCalY = posCalY;
         posCalX=calX[i];
@@ -155,9 +163,11 @@ void logica(){
 
 }
 
+// main function
 int main()
 {
     setUp();
+    // Game loop
     while(gameOver!=1){
         entrada();
         logica();
