@@ -1,6 +1,8 @@
 # Very simple snake game in C [Only for windows]
 
-// Colocar imagem
+<p align="center">
+  <img src=".img/jogoMap.png">
+</p>
 
 ## Whats is this code:
 
@@ -8,7 +10,7 @@ This is a version of the snake game made with C running in prompt. The code is n
 
 ## Whats is need to run this code:
 
-You only need a compiler for C/C++ who can compile for Windows. All header used in this project is standard headers on compilers for Windows.
+You only need a compiler for C/C++ whogameOver can compile for Windows. All header used in this project is standard headers on compilers for Windows.
 
 ## Explaining the code:
 
@@ -59,6 +61,16 @@ You only need a compiler for C/C++ who can compile for Windows. All header used 
     void logica(); // all the checks and logic of the game    
     ```
 
+
+
+
+<p align="center">
+  <img src=".img/gameOver.PNG">
+</p>
+
+<p align="center">
+  <img src=".img/record.PNG">
+</p>
 
 
 
