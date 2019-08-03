@@ -122,7 +122,7 @@ void entrada(){
 void logica(){
 
     int i;
-    int posCalX=calX[0],posCalY=calY[0]; // the position of the tail behind the head
+    int posCalX,posCalY // the position of the tail behind the head
     int posSeguiCalX, posSeguiCalY; // help variable for change the positions
     calX[0]=x;
     calY[0]=y;
