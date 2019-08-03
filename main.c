@@ -63,7 +63,6 @@ void mapa(){
             }else if(j==comX && i==comY){
                 printf("T");
             }else{
-                //mostrar calda
                 int arrumarCanto = 0;
                 for(k=0;k<caldaT;k++){
                     if(calX[k]==j && calY[k]==i){

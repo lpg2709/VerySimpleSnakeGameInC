@@ -98,6 +98,8 @@ for(i=1;i<MAXCALDA;i++){
 
 Before entering the loop, we take the x and y positions of the head. And we do the 'bubblesort'.
 
+In order to draw the syrup on the screen, we need to validate each position of the screen in relation to the vector. If the string corresponds with the current location of the screen we start the character, we change the value of the variable that allows the space to be placed on the screen. 1, so we do not print the space in the position check.
+
 
 ## Game Over Screen: 
 
@@ -110,10 +112,6 @@ Before entering the loop, we take the x and y positions of the head. And we do t
 <p align="center">
   <img src=".img/record.PNG">
 </p>
-
-
-
-
 
 ## References:
 
