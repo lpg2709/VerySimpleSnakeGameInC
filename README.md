@@ -38,8 +38,8 @@ You only need a compiler for C/C++ whogameOver can compile for Windows. All head
     >Header only for windows
     ```c
     // Funcrtion used of conio.h
-    kbhit()
-    getch()
+    int kbhit(void);
+    int getch(void);
     
     ```
     - ```windows.h```
@@ -47,7 +47,7 @@ You only need a compiler for C/C++ whogameOver can compile for Windows. All head
     >Header only for windows
     ```c
     // Funcrtion used of windows.h
-    Sleep()
+    void Sleep(DWORD);
     
     ```
     - ```time.h```
